@@ -85,24 +85,6 @@
 
     .demo-body { display: flex; height: 400px; }
 
-    .demo-sidebar {
-      width: 200px; flex-shrink: 0;
-      background: #0c1e33;
-      border-right: 1px solid rgba(255,255,255,.07);
-      padding: 16px 0;
-      display: flex; flex-direction: column; gap: 2px;
-    }
-    .sidebar-label { color: rgba(255,255,255,.3); font-size: .7rem; letter-spacing: 1px; text-transform: uppercase; padding: 8px 16px 4px; }
-    .sidebar-item {
-      display: flex; align-items: center; gap: 10px;
-      padding: 9px 16px; cursor: pointer; transition: background .15s;
-      color: rgba(255,255,255,.5); font-size: .82rem;
-    }
-    .sidebar-item.active { background: rgba(42,125,225,.2); color: #fff; border-left: 2px solid var(--accent); }
-    .sidebar-item:hover:not(.active) { background: rgba(255,255,255,.04); }
-    .sidebar-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.2); flex-shrink: 0; }
-    .sidebar-item.active .sidebar-dot { background: #4ade80; }
-
     .demo-chat {
       flex: 1; display: flex; flex-direction: column;
       padding: 16px;
@@ -419,13 +401,7 @@
 
       /* Demo chat hero */
       .hero-demo { border-radius: 14px; }
-      .demo-body { flex-direction: column; height: auto; }
-      .demo-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap;
-        border-right: none; border-bottom: 1px solid rgba(255,255,255,.07);
-        padding: 10px; gap: 4px; }
-      .sidebar-label { display: none; }
-      .sidebar-item { padding: 6px 12px; border-radius: 6px; font-size: .78rem; border-left: none !important; }
-      .sidebar-item.active { background: rgba(42,125,225,.25); border-radius: 6px; }
+      .demo-body { height: auto; }
       .demo-chat { padding: 14px; }
       .demo-stats { flex-wrap: wrap; }
       .stat-pill { flex: 0 0 50%; border-bottom: 1px solid rgba(255,255,255,.07); }
@@ -551,14 +527,6 @@
         <span class="demo-title">Asistente Virtual Zota IA · Demo en vivo</span>
       </div>
       <div class="demo-body">
-        <div class="demo-sidebar">
-          <div class="sidebar-label">Conversaciones</div>
-          <div class="sidebar-item active"><div class="sidebar-dot"></div> Soporte clientes</div>
-          <div class="sidebar-item"><div class="sidebar-dot"></div> Consultas de ventas</div>
-          <div class="sidebar-item"><div class="sidebar-dot"></div> RRHH interno</div>
-          <div class="sidebar-label" style="margin-top:8px;">Estado</div>
-          <div class="sidebar-item"><span style="color:#4ade80;font-size:.85rem;">● Activo</span></div>
-        </div>
         <div class="demo-chat">
           <div class="demo-chat-header">
             <div class="chat-av"><img src="isotipo.png" alt="Zota IA" /></div>
