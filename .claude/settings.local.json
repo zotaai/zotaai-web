@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:starsbots.com)",
+      "Bash(find /var/folders /tmp ~/Downloads ~/Desktop -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.svg\" 2>/dev/null | grep -i \"zota\\\\|logo\\\\|image\\\\|upload\\\\|tmp\" | head -20)",
+      "Bash(cp \"/Users/macbit/Desktop/Zota IA/DOCUMENTOS/LOGO/LOGO SIN FONDO.png\" \"/Users/macbit/Desktop/Zota IA/Página web/logo.png\")",
+      "Bash(cp \"/Users/macbit/Desktop/Zota IA/DOCUMENTOS/LOGO/LOGO BLANCO SIN FONDO.png\" \"/Users/macbit/Desktop/Zota IA/Página web/logo-blanco.png\")",
+      "Bash(cp \"/Users/macbit/Desktop/Zota IA/DOCUMENTOS/LOGO/ISOTIPO SIN FONDO.png\" \"/Users/macbit/Desktop/Zota IA/Página web/isotipo.png\" *)",
+      "Bash(brew install *)",
+      "Bash(python3 -m pip install Pillow)",
+      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(find /var/folders ~/Library/Caches -name \"*.png\" -newer \"/Users/macbit/Desktop/Zota IA/Página web/index.html\" 2>/dev/null | head -10)",
+      "Bash(find ~/Downloads ~/Desktop /tmp -name \"*.png\" -newer \"/Users/macbit/Desktop/Zota IA/Página web/index.html\" 2>/dev/null | head -10)",
+      "Bash(gh auth *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
