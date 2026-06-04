@@ -18,7 +18,9 @@
       "Bash(gh repo *)",
       "Bash(gh api *)",
       "Bash(git push *)",
-      "Bash(find ~/Desktop ~/Downloads -name \"*.png\" -newer \"/Users/macbit/Desktop/Zota IA/Página web/index.html\" 2>/dev/null | head -10)"
+      "Bash(find ~/Desktop ~/Downloads -name \"*.png\" -newer \"/Users/macbit/Desktop/Zota IA/Página web/index.html\" 2>/dev/null | head -10)",
+      "Bash(git commit *)",
+      "Bash(zip -r \"../zotaai-web.zip\" index.html logo-horizontal.png logo-blanco.png logo.png isotipo.png ZOTAAI.png)"
     ]
   }
 }
