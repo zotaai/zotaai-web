@@ -903,36 +903,37 @@
         <div class="demo-point">Respuesta a todas tus dudas técnicas y comerciales</div>
       </div>
     </div>
-    <div class="demo-form" data-anim="fade-left">
+    <form id="contactForm" class="demo-form" data-anim="fade-left"
+          action="https://formsubmit.co/kdelazota@zotaaiconsulting.com"
+          method="POST">
+
+      <!-- Config FormSubmit -->
+      <input type="hidden" name="_subject" value="🚀 Nueva consulta desde Zota AI Web" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="https://zotaai.github.io/zotaai-web/?enviado=1" />
+
       <h3>Reserva tu diagnóstico gratuito</h3>
       <p style="color:rgba(255,255,255,.4);font-size:.84rem;margin-bottom:4px;">Respondemos en menos de 24 horas hábiles.</p>
-      <form id="contactForm" action="https://formsubmit.co/kdelazota@zotaaiconsulting.com" method="POST" style="display:contents">
 
-        <!-- Config FormSubmit -->
-        <input type="hidden" name="_subject" value="🚀 Nueva consulta desde Zota AI Web" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_next" value="https://zotaai.github.io/zotaai-web/?enviado=1" />
-
-        <div class="form-row2">
-          <input type="text" name="Nombre" placeholder="Nombre" required />
-          <input type="text" name="Apellido" placeholder="Apellido" required />
-        </div>
-        <input type="email" name="Email" placeholder="Email corporativo" required />
-        <input type="text" name="Empresa" placeholder="Empresa" required />
-        <input type="tel" name="Teléfono" placeholder="Teléfono / WhatsApp" />
-        <select name="Servicio de interés" required>
-          <option value="" disabled selected>¿Qué servicio te interesa?</option>
-          <option>Diagnóstico de oportunidades de IA</option>
-          <option>Implementación de automatizaciones</option>
-          <option>Asistente virtual con IA</option>
-          <option>No sé todavía, quiero asesoramiento</option>
-        </select>
-        <textarea name="Mensaje" placeholder="Contanos brevemente sobre tu empresa y qué querés automatizar... (opcional)"></textarea>
-        <button type="submit" class="btn btn-blue" id="submitBtn">Agendar diagnóstico gratuito →</button>
-        <p class="form-note">Al enviar este formulario aceptás nuestra política de privacidad. No compartimos tus datos con terceros.</p>
-      </form>
-    </div>
+      <div class="form-row2">
+        <input type="text" name="Nombre" placeholder="Nombre" required />
+        <input type="text" name="Apellido" placeholder="Apellido" required />
+      </div>
+      <input type="email" name="Email" placeholder="Email corporativo" required />
+      <input type="text" name="Empresa" placeholder="Empresa" required />
+      <input type="tel" name="Teléfono" placeholder="Teléfono / WhatsApp" />
+      <select name="Servicio de interés" required>
+        <option value="" disabled selected>¿Qué servicio te interesa?</option>
+        <option>Diagnóstico de oportunidades de IA</option>
+        <option>Implementación de automatizaciones</option>
+        <option>Asistente virtual con IA</option>
+        <option>No sé todavía, quiero asesoramiento</option>
+      </select>
+      <textarea name="Mensaje" placeholder="Contanos brevemente sobre tu empresa y qué querés automatizar... (opcional)"></textarea>
+      <button type="submit" class="btn btn-blue">Agendar diagnóstico gratuito →</button>
+      <p class="form-note">Al enviar este formulario aceptás nuestra política de privacidad. No compartimos tus datos con terceros.</p>
+    </form>
   </div>
 </section>
 
@@ -1084,11 +1085,12 @@
     const form = document.getElementById('contactForm');
     if (form) {
       form.innerHTML = `
-        <div style="text-align:center;padding:32px 16px;">
-          <div style="font-size:2.5rem;margin-bottom:16px;">✅</div>
-          <h4 style="color:#fff;font-size:1.1rem;margin-bottom:10px;">¡Mensaje enviado!</h4>
-          <p style="color:rgba(255,255,255,.5);font-size:.9rem;">Nos ponemos en contacto con vos en menos de 24 horas.</p>
+        <div style="text-align:center;padding:48px 16px;">
+          <div style="font-size:3rem;margin-bottom:20px;">✅</div>
+          <h4 style="color:#fff;font-size:1.2rem;font-weight:700;margin-bottom:10px;">¡Reserva enviada!</h4>
+          <p style="color:rgba(255,255,255,.5);font-size:.92rem;line-height:1.6;">Recibimos tu solicitud. Nos ponemos en contacto con vos en menos de 24 horas hábiles.</p>
         </div>`;
+      document.getElementById('demo')?.scrollIntoView({ behavior: 'smooth' });
     }
   }
 
